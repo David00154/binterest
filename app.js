@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 app.use(expressLayouts)
 
 // app.set('layout', false)
-app.set('views', "./resources/views")
+app.set('views', join(process.cwd(), "resources", "views"))
 app.use(flash())
 app.use(showMiddleWare)
 
