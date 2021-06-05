@@ -20,10 +20,10 @@ router.post('/signin', (req, res) => {
 	let {email, password} = req.body;
 	let errors = [];
 	if(email == "") {
-		errors.push({msg: "The email field should not be plank"})
+		errors.push({msg: "The email field should not be blank"})
 	}
 	if(password == "") {
-		errors.push({msg: "The password field should not be plank"})
+		errors.push({msg: "The password field should not be blank"})
 	}
 	if(errors.length > 0) {
 		res.show('routes/signin', {layout: false, errors})
@@ -51,19 +51,19 @@ router.post('/signup', (req, res) => {
 	let {email, name, password, repeat_password, phone_number} = req.body;
 	let errors = [];
 	if(email == "") {
-		errors.push({msg: "The email field should not be plank"})
+		errors.push({msg: "The email field should not be blank"})
 	}
 	if(name == "") {
-		errors.push({msg: "The name field should not be plank"})
+		errors.push({msg: "The name field should not be blank"})
 	}
 	if(password == "") {
-		errors.push({msg: "The password field should not be plank"})
+		errors.push({msg: "The password field should not be blank"})
 	}
 	if(phone_number == "") {
-		errors.push({msg: "The phone_number field should not be plank"})
+		errors.push({msg: "The phone_number field should not be blank"})
 	}
 	if(repeat_password == "") {
-		errors.push({msg: "The repeat_password field should not be plank"})
+		errors.push({msg: "The repeat_password field should not be blank"})
 	}
 	if(password !== repeat_password) {
 		errors.push({msg: "The password and repeat password field should be the same!"})

@@ -33,17 +33,20 @@ module.exports = function() {
 			about_item: [
 				{
 					icon: "ti-file",
+					image: "/images/trusted.jpeg",
 			    	title: "Trusted Company",
 			   		content: "Trusted by thousand of people all over the world. Good reviews on all social channels"
 
 				},
 			  	{
 			  		icon: "ti-lock",
+			  		image: "/images/secured.jpeg",
 			    	title: "Secured",
 			    	content: "Secured blockchain transactions, Secured investors data and personal information. Top level ssl certification."
 			  	},
 			  	{
 			  		icon: "ti-shield",
+			  		image: "/images/padlock.jpeg",
 			    	title: "Privacy",
 			    	content: "All private information remains private. BINTEREST CRYPTO TRADE never shares Private information to any third party"
 			  	}
@@ -78,8 +81,8 @@ module.exports = function() {
 			]
 		},
 		banner: {
-			bg_image_webp: "/images/backgrounds/hero-area.webp",
-			bg_image: "/images/backgrounds/hero-area.jpg",
+			bg_image_webp: "/images/backgrounds/hero-area.jpeg",
+			bg_image: "/images/backgrounds/hero-area.jpeg",
 			icon: "",
 			title: `JOIN THOUSANDS WHO HAS STARTED TRADING WITH BINTREST CRYPTO TRADE`,
 			content: "We are reliable, simple and innovative",
