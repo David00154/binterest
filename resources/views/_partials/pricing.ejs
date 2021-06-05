@@ -1,0 +1,41 @@
+<% const pricing = siteData["pricing"] %>
+
+<section id="pricing" class="pricing section">
+  <div class="container">
+    <div class="row justify-content-center">
+
+
+      <div class="col-lg-12">
+        <div class="title text-center wow fadeInDown" data-wow-duration="500ms">
+					<h2><%=pricing.title.split(" ")[0]%><span class="color">
+            <%=pricing.title.split(" ")[1]%></span></h2>
+          <div class="border-meghna"></div>
+        </div>
+      </div>
+
+      <% pricing.pricing_table.map(({name, price, services, button}) => { %>
+
+      <div class="col-lg-3 col-md-6 col-12 text-center wow fadeInUp" data-wow-duration="200ms">
+        <div class="price-item">
+
+          <div class="price-title">
+            <h3><%=name%></h3>
+            <p><strong class="value"><%=price%></strong></p>
+            	
+          </div>
+
+          <ul>
+            <% services.forEach( service => { %>
+            <li><%=service%></li>
+            <% }) %>
+          </ul>
+
+
+          <a class="btn btn-transparent" href="<%=button.link%>"><%=button.label%></a>
+          
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>

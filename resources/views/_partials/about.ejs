@@ -1,0 +1,61 @@
+<% let about = siteData.about %>
+<% let feature = siteData.feature %>
+<section class="bg-one about section" id="about">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-12">
+				<div class="title text-center wow fadeIn" data-wow-duration="1500ms">
+					<h2> <%=about.title.split(' ')[0]%><span class="color">
+						<%=about.title.split(' ')[1]%> </span></h2>
+					<div class="border-meghna"></div>
+				</div>
+			</div>
+
+			<% about.about_item.map(({icon, title, content}) => { %>
+			<div class="col-lg-4 text-center wow fadeInUp" data-wow-duration="500ms">
+				<div class="block">
+					<div class="icon-box">
+						<i class="<%=icon%>"></i>
+					</div>
+
+					<div class="content text-center">
+						<h3><%=title%></h3>
+						<p><%=content%></p>
+					</div>
+				</div>
+			</div>
+			<% }) %>
+		</div>
+	</div>
+</section>
+<section class="section section-bg about-2 padding-0" id="feature">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-6 padding-0" style="background-image: url('<%=feature.image_webp%>'); background-size: cover; background-position: top center; background-repeat: no-repeat; min-height: 400px;">
+				<!-- this image is for trigger this section fallback background image -->
+				<img src="<%=feature.image_webp%>" style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(<%=feature.image%>)'">
+			</div>
+			<div class="col-lg-6">
+				<div class="content-block">
+					<h2><%=feature.title%></h2>
+					<p><%=feature.content%></p>
+					<div class="row">
+						<% feature.feature_item.map(({icon, content, title}) => { %>
+						<div class="col-lg-6">
+							<div class="media">
+								<div class="align-self-start mr-3">
+									<i class="<%=icon%>"></i>
+								</div>
+								<div class="media-body">
+									<h4 class="media-heading"><%=title%></h4>
+									
+								</div>
+							</div>
+						</div>
+						<% }) %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

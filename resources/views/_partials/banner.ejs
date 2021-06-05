@@ -1,0 +1,17 @@
+<section class="hero-area" style='background-image: url("<%=siteData.banner.bg_image_webp%>")'>
+	<%# this image is for trigger this section fallback background image %>
+	<img class="d-none" src="<%=siteData.banner.bg_image%>" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(<%=siteData.banner.bg_image%>)'"/>
+
+	<div class="block container">
+		<% if (siteData.banner.icon !== "") { %>
+		<div class="video-button">
+			<i class="{{ .icon }}"></i>
+		</div>
+		<% } %>
+		<h1><%=siteData.banner.title%></h1>
+		<p class=""><%=siteData.banner.content%></p>
+		<div class="text-center">
+			<a href="<%=siteData.banner.button.link%>" class="btn btn-transparent page-scroll" ><%=siteData.banner.button.label%></a>
+		</div>
+	</div>
+</section>

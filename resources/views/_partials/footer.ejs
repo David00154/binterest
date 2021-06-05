@@ -1,0 +1,27 @@
+<footer id="footer" class="section-bg">
+	<div class="container">
+		<div class="row wow fadeInUp" data-wow-duration="500ms">
+			<div class="col-xl-12">
+
+				<div class="social-icon">
+					<ul class="list-inline">
+						<% siteData.socials.map(({icon, link}) => { %>
+						<li class="list-inline-item"><a href="<%=link%>"><i class="<%=icon%>"></i></a></li>
+						<% }) %>
+					</ul>
+				</div>
+
+				<div class="copyright text-center">
+					<a href="{{ site.Home.Permalink }}">
+						<img src="" alt="<%=siteData.title%>" height="42" />
+					</a>
+					<br>
+					<p><%=siteData.copywright%></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-transparent">I Accept</span>
+</div>

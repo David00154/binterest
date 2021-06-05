@@ -1,0 +1,15 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="<%=siteData.description%>">
+
+	<title>
+		<%=siteData.title%>
+	</title>
+	<% siteData.plugins.css.map(href => { %>
+		<link rel="stylesheet" href="<%=href%>">
+	<%}) %>
+	<% siteData.plugins.scripts.map(src => {%>
+		<script src="<%=src%>" defer></script>
+	<%}) %>
+</head>

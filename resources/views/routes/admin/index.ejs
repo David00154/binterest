@@ -1,0 +1,127 @@
+<div class="container">
+	<div class="d-sm-flex align-items-center justify-content-between mb-4">
+		<h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+		<a href="/logout" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Log out</a>
+	</div>
+
+	<%# Content Row %>
+                    <div class="row">
+
+                        <%# Earnings Card Example %>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Withdrawals</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><%=params.user.withdrawals%></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <%# Earnings Card Example %>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Earnings</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><%=params.user.earning%></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <%# Earnings Card Example %>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Deposits
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><%=params.user.deposit%></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <%# Pending Requests Card Example %>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                Balance</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><%=params.user.balance%></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <%# Content Row %>
+
+                    <div class="row">
+
+                        <%# Trading Chart %>
+                        <div class="col-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-body">
+                                    <div style="width: 100%; height: calc(610px - 32px); background: transparent; padding: 0 !important;">
+					                <iframe
+					                  id="tradingview_4b404"
+					                  src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_4b404&amp;symbol=BITSTAMP%3ABTCUSD&amp;interval=1&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=f1f3f6&amp;studies=%5B%5D&amp;theme=light&amp;style=1&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=phoenixcryptotrade.com&amp;utm_medium=widget_new&amp;utm_campaign=chart&amp;utm_term=BITSTAMP%3ABTCUSD"
+					                  style="width: 100%;height: 100%;margin: 0 !important;padding: 0 !important;"
+					                  frameborder="0"
+					                  allowtransparency="true"
+					                  scrolling="no"
+					                  allowfullscreen=""
+					                ></iframe>
+					              </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <%# Trading Table %>
+                        <div class="col-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-body">
+                                    <div style="width: 100%; height: calc(610px - 32px); background: transparent; padding: 0 !important;">
+					                <iframe
+					                  allowtransparency="true"
+					                  frameborder="0"
+					                  src="https://s.tradingview.com/embed-widget/crypto-mkt-screener/?locale=en#%7B%22width%22%3A%22100%25%22%2C%22height%22%3A540%2C%22defaultColumn%22%3A%22overview%22%2C%22screener_type%22%3A%22crypto_mkt%22%2C%22displayCurrency%22%3A%22USD%22%2C%22colorTheme%22%3A%22light%22%2C%22market%22%3A%22crypto%22%2C%22enableScrolling%22%3Atrue%2C%22utm_source%22%3A%22anyoption.online%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22cryptomktscreener%22%7D"
+					                  style="boxSizing: border-box;height: 540px;width: 100%;">
+					                  </iframe>
+					              </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+</div>

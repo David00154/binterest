@@ -1,0 +1,32 @@
+<section id="testimonial" class="testimonial overly section bg-2"
+	style='background-image: url("<%=siteData.testimonial.bg_image_webp%>")'>
+
+	<img src="<%=siteData.testimonial.bg_image_webp%>" style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(<%=siteData.testimonial.bg_image%>)'">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-12">
+
+				<div id="testimonials" class="wow fadeInUp" data-wow-duration="500ms" data-wow-delay="100ms">
+					
+					<% siteData.testimonial.testimonial_item.map(({name, date, content, image_webp, image}) => { %>
+					<div class="item text-center">
+
+						<div class="client-thumb">
+							<img class="img-fluid lozad" data-src="<%=image%>" onerror="this.onerror=null;this.src='<%=image%>'" alt="<%=name%>">
+						</div>
+
+						<div class="client-info">
+							<div class="client-meta">
+								<h3><%=name%></h3>
+							</div>
+							<div class="client-comment">
+								<p><%=content%></p>
+							</div>
+						</div>
+					</div>
+					<% }) %>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

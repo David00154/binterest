@@ -1,0 +1,93 @@
+<% let {name = "", email = "", phone_number = ""} = params.body || {} %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css",>
+    <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
+    <title>Sign up | <%=siteData.title%></title>
+</head>
+<body class="bg-gradient-primary">
+
+<div class="container">
+
+<div class="card o-hidden border-0 shadow-lg my-5">
+    <div class="card-body p-0">
+
+        <%# Nested Row within Card Body %>
+        <div class="row">
+            <%# <div class="col-lg-5 d-none d-lg-block bg-register-image"></div> %>
+            <div class="col-lg-7">
+            
+                <div class="p-3">
+                    <% if(params.errors) {%>
+                        <% params.errors.map(({msg}) => { %>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                          <strong>Error</strong> <%=msg%>
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <% }) %>
+                    <% } %>
+                    <div class="text-center">
+                        <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                    </div>
+                    <form class="user" method="POST" action="/signup">
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <input type="text" class="form-control form-control-user" name="name"
+                                    placeholder="Name" value="<%=name%>">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control form-control-user" name="email" placeholder="Email Address" value="<%=email%>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-user" name="phone_number" 
+                                    placeholder="Phone Number" value="<%=phone_number%>">
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <input type="password" class="form-control form-control-user"
+                                    name="password" placeholder="Password">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="password" class="form-control form-control-user"
+                                    name="repeat_password" placeholder="Repeat Password">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-user btn-block">
+                            Register Account
+                        </button>
+                        <%# <a href="index.html" class="btn btn-google btn-user btn-block">
+                            <i class="fab fa-google fa-fw"></i> Register with Google
+                        </a>
+                        <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                            <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
+                        </a> %>
+                    </form>
+                    <hr>
+                    <%# <div class="text-center">
+                        <a class="small" href="forgot-password.html">Forgot Password?</a>
+                    </div> %>
+                    <div class="text-center">
+                        <a href="/signin" class="small" href="login.html">Already have an account? Login!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="/plugins/bootstrap/bootstrap.min.js"></script>
+    <script>
+        
+    </script>
+</body>
+
+</html>
