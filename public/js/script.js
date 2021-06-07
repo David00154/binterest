@@ -2,9 +2,9 @@
 /*	Page Preloader
 /* ========================================================================= */
 
-$(window).on('load', function () {
-	$('.preloader').fadeOut(100);
-});
+// $(window).on('load', function () {
+// 	$('.preloader').fadeOut(100);
+// });
 
 jQuery(function ($) {
 	"use strict";
@@ -35,12 +35,17 @@ jQuery(function ($) {
 		fixedBgPos: true
 	});
 
-	let preloader = $('#preloader');
-  if (preloader) {
+	// let preloader = $('#preloader');
+ //  if (preloader) {
     window.addEventListener('load', () => {
-      preloader.remove()
+    	let preloader = $('#preloader');
+       if (preloader) {
+       	console.log("content loaded")
+		      preloader.remove()
+
+       }
     });
-  }
+  // }
 
   window.addEventListener('load', () => {
     AOS.init({
