@@ -5,7 +5,6 @@ module.exports = function() {
 		copywright: "© Copyright BINTREST CRYPTO TRADE. All Rights Reserved",
 		plugins: {
 			css: [
-			"/aos/aos.css",
 			"/plugins/bootstrap/bootstrap.min.css",
 			"/plugins/themify-icons/themify-icons.css",
 			"/plugins/magnific-popup/magnific-popup.css",
@@ -14,7 +13,8 @@ module.exports = function() {
 			"https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap",
 			"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css",
 			"/css/custom.css",
-			"/css/style.css"
+			"/css/style.css",
+
 			],
 			scripts: [
 			"/plugins/jquery/jquery.min.js",
