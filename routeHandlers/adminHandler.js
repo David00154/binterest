@@ -37,8 +37,8 @@ router.get('/withdraw', (req, res) => {
 
 router.post('/withdraw', (req, res) => {
 	let errors = [];
-	let {address} = req.body;
-	if(address == "") {
+	let {address, amount} = req.body;
+	if(address == "" || amount == "") {
 		errors.push({msg: "In other to make withdrawls you need to input your btc address"})
 	} else {
 		errors.push({msg: "Your account is not activated, visit our experts for activation."})
