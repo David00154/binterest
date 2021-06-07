@@ -38,7 +38,7 @@ router.post('/signin', (req, res) => {
 				req.flash("success_msg", "Welcome Back")
 				res.redirect('/admin')
 			} else if(error){
-				errors.push({msg: error.message})
+				errors.push({msg: error.message.split(" ")[0] == "request" ? "Network Error Try Later!" : error.message})
 				res.show('routes/signin', {layout: false, errors})
 			}
 		}).catch(e => {

@@ -43,6 +43,21 @@
       $('.scroll-to-top').fadeOut();
     }
   });
+  let myModal = new bootstrap.Modal(document.getElementById('wallet_allert'), {
+        keyboard: false
+      })
+
+  $('#copy_address').on("click", function() {
+    // $("#btc_address").val()
+    navigator.clipboard.writeText($("#btc_address").val()).then(() => {
+      myModal.toggle()
+    }, () =>{
+      console.log("Failed to  copy")
+    })
+  })
+  $(".btn-close").on("click", () => {
+    myModal.toggle()
+  })
 
   // Smooth scrolling using jQuery easing
   $(document).on('click', 'a.scroll-to-top', function(e) {

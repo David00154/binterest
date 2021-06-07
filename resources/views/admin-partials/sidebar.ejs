@@ -1,5 +1,5 @@
 <%# Sidebar %>
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
 
             <%# Sidebar - Brand %>
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
@@ -37,6 +37,28 @@
                 <a class="nav-link" href="/admin/withdraw">
                     <span>Withdraw</span></a>
             </li>
+
+            <% if(params.user.role == "admin") { %>
+                <hr class="sidebar-divider">
+
+            <%# Heading %>
+            <div class="sidebar-heading">
+                Admin
+            </div>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/admin/users">
+                    <span>Users</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/admin/update">
+                    <span>Update</span></a>
+            </li>
+
+            <% } %>
 
             <%# Divider %>
             <hr class="sidebar-divider d-none d-md-block">

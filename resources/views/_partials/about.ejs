@@ -11,11 +11,11 @@
 				</div>
 			</div>
 
-			<% about.about_item.map(({icon, title, content, image}) => { %>
-			<div class="col-lg-4 text-center wow fadeInUp" data-wow-duration="500ms">
+			<% about.about_item.map(({icon, title, content, image, duration}) => { %>
+			<div class="col-lg-4 text-center wow fadeInUp" data-wow-duration="500ms" data-aos="fade-up" data-aos-delay="<%=duration%>">
 				<div class="block">
 					<div class="icon-box">
-						<img width="70" height="70" className="img" src="<%=image%>" alt="trusted-icon"/>
+						<img src="<%=image%>" style="color: #fff;" class="img" height="60" width="60" alt="">
 					</div>
 
 					<div class="content text-center">
@@ -31,11 +31,11 @@
 <section class="section section-bg about-2 padding-0" id="feature">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-6 padding-0" style="background-image: url('<%=feature.image_webp%>'); background-size: cover; background-position: top center; background-repeat: no-repeat; min-height: 400px;">
+			<div class="col-lg-6 padding-0 " data-aos="fade-left" style="background-image: url('<%=feature.image_webp%>'); background-size: cover; background-position: top center; background-repeat: no-repeat; min-height: 400px;">
 				<!-- this image is for trigger this section fallback background image -->
 				<img src="<%=feature.image_webp%>" style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(<%=feature.image%>)'">
 			</div>
-			<div class="col-lg-6">
+			<div class="col-lg-6" data-aos="fade-right">
 				<div class="content-block">
 					<h2><%=feature.title%></h2>
 					<p><%=feature.content%></p>

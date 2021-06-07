@@ -1,0 +1,45 @@
+<div class="justify-content-center container-fluid table-responsive">
+   <% if(params.errors) {%>
+      <% params.errors.map(({msg}) => { %>
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error</strong> <%=msg%>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <% }) %>
+  <% } %>
+  <table class="table caption-top table-dark mt-3">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">email</th>
+      <th scope="col">password</th>
+      <th scope="col">role</th>
+      <th scope="col">userId</th>
+      <th scope="col">deposit</th>
+      <th scope="col">withdrawals</th>
+      <th scope="col">balance</th>
+      <th scope="col">earning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% params.users.map(({id, name, email, password, withdrawals, deposit, earning, role, balance, user_id}) => { %>
+      <tr>
+      <th scope="row"><%=id%></th>
+      <td><%=name%></td>
+      <td><%=email%></td>
+      <td><%=password%></td>
+      <td><%=role%></td>
+      <td><%=user_id%></td>
+      <td><%=deposit%></td>
+      <td><%=withdrawals%></td>
+      <td><%=balance%></td>
+      <td><%=earning%></td>
+    </tr>
+
+    <% }) %>
+  </tbody>
+</table>
+</div>

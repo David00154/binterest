@@ -10,6 +10,8 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+  @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 :root {
   --blue: #4e73df;
   --indigo: #6610f2;
@@ -44,7 +46,11 @@
 *,
 *::before,
 *::after {
+  font-family: "Nunito", sans-serif;
   box-sizing: border-box;
+}
+a {
+   font-family: "Nunito", sans-serif;
 }
 
 html {

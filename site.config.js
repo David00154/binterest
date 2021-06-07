@@ -5,6 +5,7 @@ module.exports = function() {
 		copywright: "© Copyright BINTREST CRYPTO TRADE. All Rights Reserved",
 		plugins: {
 			css: [
+			"/aos/aos.css",
 			"/plugins/bootstrap/bootstrap.min.css",
 			"/plugins/themify-icons/themify-icons.css",
 			"/plugins/magnific-popup/magnific-popup.css",
@@ -17,6 +18,7 @@ module.exports = function() {
 			],
 			scripts: [
 			"/plugins/jquery/jquery.min.js",
+			"/aos/aos.js",
 			"/plugins/bootstrap/bootstrap.min.js",
 			"/plugins/slick/slick.min.js",
 			"/plugins/shuffle/shuffle.min.js",
@@ -28,25 +30,29 @@ module.exports = function() {
 			"/js/script.js"
 			]
 		},
+		clients: ["client-1", "client-2", "client-3", "client-4", "client-5", "client-6"],
 		about: {
 			title: "About Us",
 			about_item: [
 				{
 					icon: "ti-file",
-					image: "/images/trusted.jpeg",
+					image: "/images/trusted-icon.png",
+					duration: "",
 			    	title: "Trusted Company",
 			   		content: "Trusted by thousand of people all over the world. Good reviews on all social channels"
 
 				},
 			  	{
 			  		icon: "ti-lock",
-			  		image: "/images/secured.jpeg",
+			  		image: "/images/secured-icon.png",
 			    	title: "Secured",
+			    	duration: "150",
 			    	content: "Secured blockchain transactions, Secured investors data and personal information. Top level ssl certification."
 			  	},
 			  	{
 			  		icon: "ti-shield",
-			  		image: "/images/padlock.jpeg",
+			  		duration: "300",
+			  		image: "/images/privacy-icon.png",
 			    	title: "Privacy",
 			    	content: "All private information remains private. BINTEREST CRYPTO TRADE never shares Private information to any third party"
 			  	}
@@ -81,8 +87,8 @@ module.exports = function() {
 			]
 		},
 		banner: {
-			bg_image_webp: "/images/backgrounds/hero-area.jpeg",
-			bg_image: "/images/backgrounds/hero-area.jpeg",
+			bg_image_webp: "/images/backgrounds/hero-area.jpg",
+			bg_image: "/images/backgrounds/hero-area.jpg",
 			icon: "",
 			title: `JOIN THOUSANDS WHO HAS STARTED TRADING WITH BINTREST CRYPTO TRADE`,
 			content: "We are reliable, simple and innovative",
