@@ -6,7 +6,7 @@ module.exports = function() {
 		plugins: {
 			css: [
 			// "https://unpkg.com/aos@next/dist/aos.css",
-			"/plugins/bootstrap/bootstrap.min.css",
+			"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css",
 			"/plugins/themify-icons/themify-icons.css",
 			"/plugins/magnific-popup/magnific-popup.css",
 			"/plugins/slick/slick.css",
