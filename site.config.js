@@ -5,7 +5,7 @@ module.exports = function() {
 		copywright: "© Copyright BINTREST CRYPTO TRADE. All Rights Reserved",
 		plugins: {
 			css: [
-			// "https://unpkg.com/aos@next/dist/aos.css",
+			"https://unpkg.com/aos@next/dist/aos.css",
 			"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css",
 			"/plugins/themify-icons/themify-icons.css",
 			"/plugins/magnific-popup/magnific-popup.css",

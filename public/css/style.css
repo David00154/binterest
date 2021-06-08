@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+ /*@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');*/
 /*
 Template Name: Meghna Responsive HTML5/CSS3 Business Template
 Author: Themefisher
@@ -33,12 +33,12 @@ h4,
 h5,
 h6 {
   font-weight: 400;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #afbac4;
 }
 
 p {
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 [scroll-behavior=smooth] {
@@ -90,6 +90,16 @@ a:hover {
 a:focus,
 a:hover {
   color: #6CB670;
+}
+
+.fero:after {
+  content: "";
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .kill-margin-bottom {
