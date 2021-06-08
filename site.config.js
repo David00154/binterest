@@ -2,7 +2,7 @@ module.exports = function() {
 	return {
 		title: "BINTREST TRADE",
 		description: "We are reliable, simple and innovative",
-		copywright: "© Copyright BINTREST CRYPTO TRADE. All Rights Reserved",
+		copywright: "© Copyright 2021 BINTREST CRYPTO TRADE. All Rights Reserved",
 		plugins: {
 			css: [
 			// "https://unpkg.com/aos@next/dist/aos.css",

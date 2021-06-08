@@ -78,7 +78,7 @@ router.post('/update', chechIfIsAdmin, (req, res) => {
 		  .eq('user_id', userid)
 		  .then(({data, error}) => {
 		  	if(error) {
-		  		res.show('routes/admin/update', {layout: "layouts/admin", title: "Update Error", ...req.body, errors: [{msg: error.message}]})
+		  		res.show('routes/admin/update', {layout: "layouts/admin", title: "Update Error", ...req.body, errors: [{msg: error.message.split(" ")[0] == "request" ? "Network Error Try Later!" : error.message}]})
 		  	} else {
 		  		res.show('routes/admin/update', {layout: "layouts/admin", title: "Update", success: "User Updated"})
 		  	}
@@ -86,6 +86,49 @@ router.post('/update', chechIfIsAdmin, (req, res) => {
 		  	res.show('routes/admin/update', {layout: "layouts/admin", title: "Update Error", ...req.body, errors: [{msg: "Error in connection"}]})
 		  })
  	}
+})
+
+
+
+
+
+router.get('/notifications', (req, res) => {
+	supabase
+	.from("Notifications")
+	.select("*")
+	.eq("user_id", supabase.auth.user().id)
+	.then(({ data: Notifications, error }) => {
+		console.log(Notifications)
+		if(error) {
+			res.show('routes/admin/notifications', {layout: "layouts/admin", title: "Notifications", errors: [{msg: error.message.split(" ")[0] == "request" ? "Network Error Try Later!" : error.message}]})
+		} else {
+			res.show('routes/admin/notifications', {layout: "layouts/admin", title: "Notifications", notifications: Notifications})
+		}
+	})
+	.catch(e => {
+		console.log(e)
+	})
+})
+
+router.get('/notifications/:_id', (req, res) => {
+	let {_id} = req.params;
+	supabase
+	.from("Notifications")
+	.select("*")
+	.eq("user_id", supabase.auth.user().id)
+	.then(({ data: Notifications, error }) => {
+		console.log(Notifications)
+		if(error) {
+			res.show('routes/admin/notifications', {layout: "layouts/admin", title: "Notifications", errors: [{msg: error.message.split(" ")[0] == "request" ? "Network Error Try Later!" : error.message}]})
+		} else {
+			let content = Notifications.filter(({id}) => id == _id.toString())
+				console.log(1, content)
+			res.show('routes/admin/notifications', {layout: "layouts/admin", title: "Notifications", notification: content})
+		}
+	})
+	.catch(e => {
+		console.log(e)
+	})
 })
 
 const adminHandler = router;

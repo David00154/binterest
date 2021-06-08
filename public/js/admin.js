@@ -1,3 +1,10 @@
+let preloader = $('#preloader');
+  if (preloader) {
+    window.addEventListener('load', () => {
+      preloader.remove()
+    });
+  }
+
 (function($) {
   "use strict"; // Start of use strict
 

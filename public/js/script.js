@@ -35,17 +35,12 @@ jQuery(function ($) {
 		fixedBgPos: true
 	});
 
-	// let preloader = $('#preloader');
- //  if (preloader) {
+	let preloader = $('#preloader');
+  if (preloader) {
     window.addEventListener('load', () => {
-    	let preloader = $('#preloader');
-       if (preloader) {
-       	console.log("content loaded")
-		      preloader.remove()
-
-       }
+      preloader.remove()
     });
-  // }
+  }
 
   window.addEventListener('load', () => {
     AOS.init({
