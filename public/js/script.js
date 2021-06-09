@@ -38,18 +38,20 @@ jQuery(function ($) {
 	let preloader = $('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
-      preloader.remove()
+      
+      setInterval(() => {
+      	preloader.remove()
+      	AOS.init({
+		      duration: 1000,
+		      easing: 'ease-in-out',
+		      startEvent: "DOMContentLoaded",
+		      once: false,
+		      mirror: false
+		    })
+      }, 3000)
     });
   }
 
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
-  });
 
 
 	/* ========================================================================= */

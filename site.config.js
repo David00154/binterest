@@ -5,7 +5,8 @@ module.exports = function() {
 		copywright: "© Copyright 2021 BINTREST CRYPTO TRADE. All Rights Reserved",
 		plugins: {
 			css: [
-			// "https://unpkg.com/aos@next/dist/aos.css",
+			"https://unpkg.com/aos@next/dist/aos.css",
+			// "aos/aos.css",
 			"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css",
 			"/plugins/themify-icons/themify-icons.css",
 			"/plugins/magnific-popup/magnific-popup.css",
@@ -20,7 +21,6 @@ module.exports = function() {
 			],
 			scripts: [
 			"/plugins/jquery/jquery.min.js",
-			"/aos/aos.js",
 			"/plugins/bootstrap/bootstrap.min.js",
 			"/plugins/slick/slick.min.js",
 			"/plugins/shuffle/shuffle.min.js",
@@ -30,7 +30,8 @@ module.exports = function() {
 			"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js",
 			"/js/faker.js",
 			"https://unpkg.com/swiper/swiper-bundle.js",
-			"/js/script.js"
+			"/aos/aos.js",
+			"/js/script.js",
 			]
 		},
 		clients: ["client-1", "client-2", "client-3", "client-4", "client-5", "client-6"],
