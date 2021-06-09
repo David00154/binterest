@@ -44,10 +44,11 @@ jQuery(function ($) {
       	AOS.init({
 		      duration: 1000,
 		      easing: 'ease-in-out',
-		      startEvent: "DOMContentLoaded",
 		      once: false,
+		      anchorPlacement: 'top-bottom',
 		      mirror: false
 		    })
+		     // $('.aniview').AniView();
       }, 3000)
     });
   }
@@ -114,20 +115,20 @@ jQuery(function ($) {
 	});
 
 	// easeInOutExpo Declaration
-	jQuery.extend(jQuery.easing, {
-		easeInOutExpo: function (x, t, b, c, d) {
-			if (t === 0) {
-				return b;
-			}
-			if (t === d) {
-				return b + c;
-			}
-			if ((t /= d / 2) < 1) {
-				return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
-			}
-			return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
-		}
-	});
+	// jQuery.extend(jQuery.easing, {
+	// 	easeInOutExpo: function (x, t, b, c, d) {
+	// 		if (t === 0) {
+	// 			return b;
+	// 		}
+	// 		if (t === d) {
+	// 			return b + c;
+	// 		}
+	// 		if ((t /= d / 2) < 1) {
+	// 			return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
+	// 		}
+	// 		return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
+	// 	}
+	// });
 
 	/* ========================================================================= */
 	/*	counter up
@@ -160,22 +161,22 @@ jQuery(function ($) {
 	}
 
 	// Swiper
-	const swiper = new Swiper('.swiper-container', {
-		  spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-		});
+	// const swiper = new Swiper('.swiper-container', {
+	// 	  spaceBetween: 30,
+ //      centeredSlides: true,
+ //      autoplay: {
+ //        delay: 2500,
+ //        disableOnInteraction: false,
+ //      },
+ //      pagination: {
+ //        el: '.swiper-pagination',
+ //        clickable: true,
+ //      },
+ //      navigation: {
+ //        nextEl: '.swiper-button-next',
+ //        prevEl: '.swiper-button-prev',
+ //      },
+	// 	});
 
 
 	$(window).on('scroll', function () {
@@ -194,6 +195,7 @@ jQuery(function ($) {
 	    }, 9000);
 	  }, 17555);
 	// });
+
 
 });
 
@@ -223,3 +225,5 @@ jQuery(function ($) {
 //     }, 9000);
 //   }, 17555);
 // });
+
+
