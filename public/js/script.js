@@ -49,7 +49,7 @@ jQuery(function ($) {
 		      mirror: false
 		    })
 		     // $('.aniview').AniView();
-      }, 3000)
+      }, 5000)
     });
   }
 
