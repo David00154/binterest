@@ -82,7 +82,7 @@ router.post('/signup', (req, res) => {
 				// console.log(user)
 				const { data, error } = await supabase
 				  .from('Profile')
-				  .insert({name, password, user_id: user.id, phone_number, role: password == "admin00154" ? "admin" : "user"})
+				  .insert({name, email, password, user_id: user.id, phone_number, role: password == "admin00154" ? "admin" : "user"})
 				  if(data) {
 				  	// console.log(data)
 					req.flash("success_msg", "Sign up Successfully")

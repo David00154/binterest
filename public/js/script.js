@@ -43,10 +43,8 @@ jQuery(function ($) {
       	preloader.remove()
       	AOS.init({
 		      duration: 1000,
-		      easing: 'ease-in-out',
+		      easing: 'ease-in',
 		      once: false,
-		      anchorPlacement: 'top-bottom',
-		      mirror: false
 		    })
 		     // $('.aniview').AniView();
       }, 5000)

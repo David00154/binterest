@@ -35,6 +35,36 @@ router.get('/withdraw', (req, res) => {
 	res.show('routes/admin/withdraw', {layout: "layouts/admin", title: "Withdraw"})
 })
 
+router.get('/sendNotification', chechIfIsAdmin, (req, res) => {
+	res.show('routes/admin/sendNotifications', {layout: "layouts/admin", title: "Send notification"})
+})
+
+router.post('/sendNotification', chechIfIsAdmin, (req, res) => {
+	let {user_id, topic, body} = req.body;
+	let errors = [];
+	if(user_id == "", topic == "",body == "") {
+		errors.push({msg: "All fields are required"});
+	}
+	if(errors.length > 0) {
+		res.show('routes/admin/sendNotifications', {layout: "layouts/admin", errors, title: "Error sending notifications"})
+	} else {
+		supabase
+		.from("Notifications")
+		.insert({topic, user_id, body})
+		.then(({data, error}) => {
+			if(error) {
+				res.show('routes/admin/sendNotifications', {layout: "layouts/admin", errors: [{msg: error.message}], title: "Error sending notifications"})
+			} else {
+				res.show('routes/admin/sendNotifications', {layout: "layouts/admin", success: "Notification sent successfully", title: "Send Notification"})
+			}
+		})
+		.catch(e => {
+			console.log(e)
+		})
+	}
+})
+
+
 router.post('/withdraw', (req, res) => {
 	let errors = [];
 	let {address, amount} = req.body;

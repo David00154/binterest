@@ -16,7 +16,7 @@ module.exports = function() {
 			"https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap",
 			"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css",
 			"/css/style.css",
-			"https://unpkg.com/swiper/swiper-bundle.css",
+			// "https://unpkg.com/swiper/swiper-bundle.css",
 			"/css/custom.css",
 
 			],
@@ -33,7 +33,7 @@ module.exports = function() {
 			"/plugins/google-map/map.js",
 			"https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js",
 			"/js/faker.js",
-			"https://unpkg.com/swiper/swiper-bundle.js",
+			// "https://unpkg.com/swiper/swiper-bundle.js",
 			// "/aos/aos.js",
 			"/js/script.js",
 			]

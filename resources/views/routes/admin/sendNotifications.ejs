@@ -1,0 +1,40 @@
+<div class="row justify-content-center container-fluid">
+  <div class="col-lg-7">
+    <% if(params.errors) {%>
+          <% params.errors.map(({msg}) => { %>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error</strong> <%=msg%>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <% }) %>
+      <% } %>
+       <% if(params.success) {%>
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success</strong> <%=params.success%>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      <% } %>
+    <form action="/admin/sendNotification" class="" method="POST">
+      <div class="form-floating mb-3">
+      <input name="user_id" type="text" class="form-control form-control-lg" id="floatingInput" placeholder="Enter User Id">
+    </div>
+    <div class="form-floating mb-3">
+      <input name="topic" type="text" class="form-control form-control-lg" id="floatingInput" placeholder="Enter Topic">
+    </div>
+    <div class="form-floating mb-3">
+      <textarea name="body" type="text" class="form-control form-control-lg" id="floatingInput" placeholder="Enter Body"></textarea>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit">Send Notifications</button>
+      </div>
+    </form>
+    </div>
+
+    
+    
+  </div>
+</div>
