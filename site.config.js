@@ -7,6 +7,7 @@ module.exports = function() {
 			css: [
 			// "https://unpkg.com/aos@next/dist/aos.css",
 			"aos/aos.css",
+			"/css/custom.css",
 			// "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
 			"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css",
 			"/plugins/themify-icons/themify-icons.css",
@@ -17,7 +18,6 @@ module.exports = function() {
 			"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css",
 			"/css/style.css",
 			// "https://unpkg.com/swiper/swiper-bundle.css",
-			"/css/custom.css",
 
 			],
 			scripts: [
