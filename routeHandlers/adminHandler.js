@@ -23,6 +23,32 @@ const chechIfIsAdmin = (req, res, next) => {
 	}
 }
 
+router.get('/delete-user/:id', chechIfIsAdmin, (req, res) => {
+	let errors = [];
+	supabase
+	  .from('Profile')
+	  .delete()
+	  .eq('id', parseInt(req.params.id))
+	  .then(async ({data, error}) => {
+  		if(error) {
+  			// res.show('routes/admin/users', {layout: "layouts/admin", errors: [{msg: error.message}], title: "Error deleting user"})
+  			const {data: Profile, error: e} = await supabase
+				.from("Profile")
+				.select("*")
+				if(e) {
+					res.show('routes/admin/users', {layout: "layouts/admin", errors: [{msg: e.message}], title: "Error fetching users"})
+				} else {
+					res.show('routes/admin/users', {layout: "layouts/admin", title: "Users", users: Profile})
+				}
+
+  		} else {
+  			res.redirect('/admin/users')
+  		}
+	  })
+	  .catch(e => {
+			console.log(e)
+		})
+})
 router.get('/', (req, res) => {
 	res.show('routes/admin/index', {layout: "layouts/admin", title: "Dashboard"})
 })

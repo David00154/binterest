@@ -22,6 +22,7 @@
       <th scope="col">withdrawals</th>
       <th scope="col">balance</th>
       <th scope="col">earning</th>
+      <th scope="col">delete</th>
     </tr>
   </thead>
   <tbody>
@@ -37,6 +38,7 @@
       <td><%=withdrawals%></td>
       <td><%=balance%></td>
       <td><%=earning%></td>
+      <td><a class="btn btn-light" href="/admin/delete-user/<%=id%>" role="button">Delete</a></td>
     </tr>
 
     <% }) %>
